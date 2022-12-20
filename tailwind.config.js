@@ -2,7 +2,14 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        kanit: ['kanit'],
+      },
+      maxWidth: {
+        'complete': '1400px',
+      }
+    },
   },
   plugins: [],
 }
