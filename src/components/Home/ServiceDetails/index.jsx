@@ -1,68 +1,25 @@
-import starBox from '../../../images/star-box.svg'
-import ticket from '../../../images/ticket.svg'
-import book from '../../../images/book.svg'
-import stackLine from '../../../images/stack-line.svg'
+import data from './data'
 
 const ServiceDetails = () => {
   return (
     <>
-      <div className="flex gap-5">
-        <div>
-          <div>
-            <img src={starBox} alt="Star Box" />
-          </div>
-          <div>
-            <h2 className="text-xl font-bold uppercase">
-              Unique Digital Collectibles
-            </h2>
-            <p className="text-sm leading-6">
-              Discover collections based on your favorite DC characters.
-            </p>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src={ticket} alt="Ticket" />
-          </div>
-          <div>
-            <h2 className="text-xl font-bold uppercase">
-              Exclusive Fan Experiences
-            </h2>
-            <p className="text-sm leading-6">
-              Your collectibles are the key to exclusive previews and events.
-            </p>
-          </div>
-        </div>
+    <div className='px-[10%] flex justify-center'>
+      <div className="mb:max-lg:grid mb:max-lg:grid-cols-2 lg:flex gap-10 sm-max-md:gap-20 2xl:gap-20">
+        {data.map((item, index) => {
+          return (
+            <>
+              <div className='space-y-3 sm:w-[200px]'>
+                <img src={item.img} alt="" />
+                <h2 className="text-xl font-bold uppercase lg:text-2xl">{item.heading}</h2>
+                <p className="text-sm leading-2 text-white/60 lg:text-lg">
+                  {item.details}
+                </p>
+              </div>
+            </>
+          )
+        })}
       </div>
-      <div className="flex gap-5">
-        <div>
-          <div>
-            <img src={book} alt="Book" />
-          </div>
-          <div>
-            <h2 className="text-xl font-bold uppercase">
-              An immersive Storyworld
-            </h2>
-            <p className="text-sm leading-6">
-              Participate in original storylines and create your world.
-            </p>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src={stackLine} alt="Stack Line" />
-          </div>
-          <div>
-            <h2 className="text-xl font-bold uppercase">
-              A BUILT-IN MARKETPLACE
-            </h2>
-            <p className="text-sm leading-6">
-              Buy and sell your collectibles with ease on the DC NFT
-              marketplace.
-            </p>
-          </div>
-        </div>
-      </div>
+    </div>
     </>
   )
 }

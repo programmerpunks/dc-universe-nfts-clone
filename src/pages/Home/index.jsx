@@ -1,3 +1,4 @@
+import Collectibles from "../../components/Home/DcCollectibles"
 import CreateAccount from "../../components/Home/CreateAccount"
 import Instructions from "../../components/Home/Instructions"
 import ServiceDetails from "../../components/Home/ServiceDetails"
@@ -10,6 +11,7 @@ const Home = () => {
       <Welcome />
       <ServiceDetails />
       <StoryWorld />
+      <Collectibles />
       <Instructions />
       <CreateAccount />
     </div>
