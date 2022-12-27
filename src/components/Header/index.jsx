@@ -17,20 +17,19 @@ const Header = () => {
           <img src={pic2} alt="" />
         </div>
 
-        <ul className="hidden md:flex text-neutral-400 gap-5">
+        <ul className="hidden lg:flex text-neutral-400 gap-5">
           <li className="p-4 hover:text-blue-500">Purchase</li>
           <li className="p-4 hover:text-blue-500">Marketplace</li>
           <li className="p-4 hover:text-blue-500">Collections</li>
           <li className="p-4 hover:text-blue-500">Blog</li>
           <li className="p-4 hover:text-blue-500">FAQs</li>
 
-
-          <div className=" fle mx-10 pt-2">
+          <div className=" flex mx-10 pt-2">
             <div className="gap-4 flex">
-              <button class="bg-transparent hover:bg-blue-500 font-normal hover:text-white py-2 px-8 border hover:border-transparent text-white rounded-sm">
+              <button class="bg-transparent hover:bg-blue-500 font-normal hover:text-white py-2 px-8 border hover:border-transparent text-white rounded-sm text-sm">
                 SIGN UP
               </button>
-              <button class="bg-blue-500 hover:bg-blue-500 hover:text-white py-2 px-8 border border-blue-500 hover:border-transparent text-white font-normal rounded-sm">
+              <button class="bg-blue-500 hover:bg-blue-500 hover:text-white py-2 px-8 border border-blue-500 hover:border-transparent text-white font-normal rounded-sm text-sm">
                 LOGIN
               </button>
             </div>
@@ -48,10 +47,10 @@ const Header = () => {
           }
         >
           <h1 className="w-full text-3xl font-bold text-[#00df9a] m-4">
-          <div className="flex gap-2 w-[90px] h-[40px]">
-          <img src={pic1} alt="" className="" />
-          <img src={pic2} alt="" />
-          </div>
+            <div className="flex gap-2 w-[90px] h-[40px]">
+              <img src={pic1} alt="" className="" />
+              <img src={pic2} alt="" />
+            </div>
           </h1>
           <li className="p-4 border-b border-gray-600">Purchase</li>
           <li className="p-4 border-b border-gray-600">Marketplace</li>
