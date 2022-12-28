@@ -1,4 +1,5 @@
 import React from 'react'
+import {BsWallet2} from 'react-icons/bs';
 const pic1 = require("../../images/dc-logo.svg").default;
 const pic2 = require("../../images/nft-studio-logo.svg").default;
 const Navbar = () => {
@@ -10,19 +11,16 @@ const Navbar = () => {
         <a href="/" className="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">
           <img src={pic1} alt="/" />
             </a>
-
         <a href="/" className="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">
           <img src={pic2} alt="" />
              </a>
         <a href="/" className="text-white dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6">home</a>
 
-        <a href="/" className="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">features</a>
+        <a href="/" className="text-white dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6">features</a>
 
-        <a href="/" className="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">pricing</a>
+        <a href="/" className="text-white dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6">pricing</a>
 
-        <a href="/" className="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">blog</a>
-
-         
+        <a href="/" className="text-black dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6 flex bg-gray-50"> <BsWallet2 size={25}/></a>
     </div>
 </nav>
     </div>

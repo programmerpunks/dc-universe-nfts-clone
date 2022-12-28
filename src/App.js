@@ -1,7 +1,7 @@
 // import Home from "./pages/Home";
 
 
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 // import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 
@@ -13,6 +13,8 @@ const App = () => {
          {/* <Header/> */}
 <Navbar/>
 
+
+
       <div className="px-5 bg-black text-white font-kanit gap-4">
         <Home />
       </div>
@@ -21,7 +23,7 @@ const App = () => {
       </div>
 
       {/* <Listing /> */}
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

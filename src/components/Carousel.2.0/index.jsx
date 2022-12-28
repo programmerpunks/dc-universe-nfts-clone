@@ -20,10 +20,10 @@ const Carousel2 = () => {
   };
   return (
     <div className='relative'>
-    <img src={imageSlide[currentState].url} alt='' className='object-contain hidden sm:block '/>
-    <img src={imageSlide[currentState].url2} alt='' className='object-contain sm:hidden  '/>
-      <div className='absolute  sm:left-40 lg:top-96 top-[50%] lg:w-[50%]  mb:text-left text-center  '>
-        <button className='bg-green-400 m-2'><p className='p-5 font-sm py-2 px-5 text-white rounded-sm text-sm'>Live Now</p></button>
+    <img src={imageSlide[currentState].url} alt='' className='object-contain hidden sm:block bg-no-repeat '/>
+    <img src={imageSlide[currentState].url2} alt='' className='object-contain sm:hidden bg-no-repeat '/>
+      <div className='absolute  sm:left-40 lg:top-96 top-[50%] lg:w-[50%]  md:text-left text-center h-fit '>
+        <button className='bg-green-400 '><p className='p-5 font-sm py-2 px-5 text-white rounded-sm text-sm'>Live Now</p></button>
         <h1 className='lg:text-6xl text-3xl font-extrabold'>{imageSlide[currentState].heading}</h1>
         <p className='text-base font-lora'>{imageSlide[currentState].description}</p>
         <div className="c-button pt-4 flex gap-2">

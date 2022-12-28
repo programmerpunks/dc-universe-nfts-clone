@@ -21,6 +21,8 @@ const Carousel = () => {
     backgroundPosition: "center",
     backgroundSize: "contain",
     height: "100%",
+
+    // object-fit: 'cover',
   };
 
   const goToNext = (currentState) => {
@@ -28,7 +30,8 @@ const Carousel = () => {
   };
   return (
     <div>
-      <div style={bgIMageStyle} className="p-96"></div>
+      <div style={bgIMageStyle} className="p-96 bg-no-repeat">
+
       <div className="description ">
         <div className=" pt-44">
           <div className="py-2">
@@ -56,6 +59,7 @@ const Carousel = () => {
         <button class="bg-gray-800 font-sm py-2 px-14 text-white rounded-sm text-sm mt-5 border-white border font-bold ">
           JOIN THE DISCORD
         </button>
+      </div>
       </div>
       {/* <div className="bg">
       </div> */}
