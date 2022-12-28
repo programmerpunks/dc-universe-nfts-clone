@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./Card.css";
-// import pic1 from "../../images/dc-universe-hero-section.png";
-
+import {TbStack2} from 'react-icons/tb';
 const HorizontalCard = ({ url, url2, comicName, date }) => {
   const [visibleUrl, setVisibleUrl] = useState(url2);
   const handleMouseHover = () => {
@@ -28,12 +27,12 @@ const HorizontalCard = ({ url, url2, comicName, date }) => {
 
         <div className="absolute z-10 top-[50%] h-full grad"></div>
       <div className="h-[100px]"></div>
-      <div className="absolute bottom-10 ">
+      <div className="absolute bottom-10 left-10">
         <p className="text-blue-400 text-xs font-bold">BUY IN MARKETPLACE</p>
         <p className="font-bold">{comicName}</p>
         <p className="font-semibold">{date}</p>
-        <button class="bg-transparent hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-          Button
+        <button class="bg-black border text-white py-2 px-5 rounded-full  text-xs mt-2 flex gap-1">
+          <TbStack2 size={15}/> <p className="">5 RARITIES </p>
         </button>
       </div>
     </div>
