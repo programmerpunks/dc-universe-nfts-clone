@@ -15,7 +15,6 @@ const Collectibles = () => {
   const handleNext = () => {
     carouselRef.current.next()
   }
-
   return (
     <div className="">
       <div className="flex justify-between">
