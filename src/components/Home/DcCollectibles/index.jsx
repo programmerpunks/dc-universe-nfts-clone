@@ -1,5 +1,7 @@
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
 import SingleNFTCollectible from '../SingleNFTCollectible'
+import data from './data.js'
+import settings from './team_settings'
 
 import { Carousel } from 'antd'
 import { useRef } from 'react'
@@ -13,6 +15,7 @@ const Collectibles = () => {
   const handleNext = () => {
     carouselRef.current.next()
   }
+
   return (
     <div className="">
       <div className="flex justify-between">
@@ -26,21 +29,41 @@ const Collectibles = () => {
             </p>
           </button>
           <div className="flex gap-2">
-            <div className="bg-blue-600 rounded-full p-2" onClick={() => handlePrevious()}>
+            <div
+              className="bg-blue-600 rounded-full p-2"
+              onClick={() => handlePrevious()}
+            >
               <MdKeyboardArrowLeft size={30} />
             </div>
-            <div className="bg-blue-600 rounded-full p-2" onClick={() => handleNext()}>
+            <div
+              className="bg-blue-600 rounded-full p-2"
+              onClick={() => handleNext()}
+            >
               <MdKeyboardArrowRight size={30} />
             </div>
           </div>
         </div>
       </div>
-      <Carousel slidesToShow={2} infinite={false} ref={carouselRef}>
-        <SingleNFTCollectible />
-        <SingleNFTCollectible />
-        <SingleNFTCollectible />
-        <SingleNFTCollectible />
-        <SingleNFTCollectible />
+      <Carousel
+        slidesToShow={2}
+        infinite={false}
+        draggable={true}
+        variableWidth={true}
+        // {...settings}
+        ref={carouselRef}
+      >
+        {data.map((item, index) => {
+          return (
+            <di>
+
+              <SingleNFTCollectible
+                img={item.img}
+                heading={item.heading}
+                details={item.details}
+              />
+            </di>
+          )
+        })}
       </Carousel>
     </div>
   )
