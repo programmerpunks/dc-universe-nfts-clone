@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -106,37 +106,36 @@ const Home = () => {
       imagesLocal.push(
         await jsonBody.image.replace("ipfs://", "https://ipfs.io/ipfs/")
       );
-    });
-    setTimeout(() => {
       setImages(imagesLocal);
-    }, [3000]);
+    });
   };
+
+  useEffect(() => {
+    getTokens();
+  }, [userMintedAmount]);
+
   return (
     <div className="max-w-complete space-y-10">
       <ToastContainer position="top-center" autoClose={2000} />
       <BrowserRouter>
+        <Welcome
+          connection={connection}
+          disconnect={disconnect}
+          getTokens={getTokens}
+          logout={logout}
+          readContract={readContract}
+          wallet={wallet}
+        />
         <Routes>
           <Route
             exact
             path="/"
             element={
               <>
-                <Welcome
-                  wallet={wallet}
-                  price={price}
-                  images={images}
-                  userMintedAmount={userMintedAmount}
-                  maxMintAmount={maxMintAmount}
-                  disconnect={disconnect}
-                  connection={connection}
-                  readContract={readContract}
-                  getTokens={getTokens}
-                />
                 <ServiceDetails />
                 <StoryWorld />
                 <Collectibles />
                 <Instructions />
-                <CreateAccount />
               </>
             }
           />
@@ -146,27 +145,21 @@ const Home = () => {
             element={
               <>
                 <Mint
-                  wallet={wallet}
-                  price={price}
-                  images={images}
-                  userMintedAmount={userMintedAmount}
-                  maxMintAmount={maxMintAmount}
-                  disconnect={disconnect}
                   connection={connection}
-                  readContract={readContract}
+                  disconnect={disconnect}
                   getTokens={getTokens}
-                  logout={logout}
-                  setUserMintedAmount={setUserMintedAmount}
-                  setMaxMintAmount={setMaxMintAmount}
-                  setPrice={setPrice}
-                  setImages={setImages}
+                  images={images}
+                  maxMintAmount={maxMintAmount}
+                  price={price}
+                  readContract={readContract}
+                  userMintedAmount={userMintedAmount}
+                  wallet={wallet}
                 />
-
-                <CreateAccount />
               </>
             }
           />
         </Routes>
+        <CreateAccount />
       </BrowserRouter>
     </div>
   );

@@ -1,44 +1,33 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
+import { toast } from "react-toastify";
+
 import { ContractABI } from "./Contract";
-import { useNavigate } from "react-router-dom";
 
-import { motion } from "framer-motion";
-import { Bounce, Shake } from "react-motions";
-
-import harley from "../../images/welcome-dc-nft.png";
+import "react-toastify/dist/ReactToastify.css";
 
 function Mint({
-  wallet,
-  price,
-  images,
-  userMintedAmount,
-  maxMintAmount,
-  disconnect,
   connection,
-  readContract,
+  disconnect,
   getTokens,
-  logout,
-  setUserMintedAmount,
-  setMaxMintAmount,
-  setPrice,
-  setImages,
+  images,
+  maxMintAmount,
+  price,
+  readContract,
+  userMintedAmount,
+  wallet,
 }) {
   const [amount, setAmount] = useState(0);
   const [check, setCheck] = useState(false);
 
   const { REACT_APP_CONTRACT_ADDRESS } = process.env;
-  const navigate = useNavigate();
 
   const notify = (message) => {
     toast.error(message, {
       toastId: "custom-id-yes",
     });
   };
+
   const mint = async (mintAmount) => {
     setCheck(!check);
     if (wallet === "Connect a Wallet") {
@@ -68,6 +57,7 @@ function Mint({
       }
     }
   };
+
   useEffect(() => {
     if (window.ethereum) {
       window.ethereum.on("chainChanged", async () => {
@@ -81,82 +71,57 @@ function Mint({
       });
     }
   });
-  const initialFun = async () => {
-    await connection();
-    await readContract();
-    await getTokens();
-  };
+
   useEffect(() => {
-    initialFun();
+    const initialFunction = async () => {
+      setTimeout(async () => {
+        await getTokens();
+      }, [2000]);
+    };
+    initialFunction();
   }, []);
 
   return (
     <>
-      <div className=" flex justify-between">
-        <Bounce infinite>
-          <img className="w-80 " src={harley} alt="Harley Quinn" />
-        </Bounce>
-        <button
-          onClick={async () => {
-            logout
-              ? (async function () {
-                  await disconnect();
-                  await setUserMintedAmount(0);
-                  await setMaxMintAmount("-");
-                  await setPrice("-");
-                  await setImages([]);
-                  navigate("/");
-                })()
-              : (async function () {
-                  await connection();
-                  await readContract();
-                  await getTokens();
-                  navigate("/mint");
-                })();
-          }}
-          className={`hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 h-10 mt-12 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200 ${
-            logout ? "hover:before:content-['Disconnect:']" : ""
-          }`}
-        >
-          {wallet}
-        </button>
-      </div>
+      <div className=" flex justify-between"></div>
       <div className="text-white text-2xl text-center font-bold bg-blue-light pb-5 bg-opacity-80">
         <div>
           Total minted: {userMintedAmount}/{maxMintAmount}
         </div>
         <div>The Price is {price}eth ETH + Gas Fee</div>
-        <div className=" py-5 flex justify-center">
-          <div className="outline flex px-20 py-5">
-            <button
-              class="btn2 px-5 py-2 relative border text-white border-white uppercase font-semibold "
-              type="button"
-              onClick={() => {
-                setAmount(amount - 1);
-              }}
-            >
-              <span class="absolute inset-0 bg-yelloww"></span>
-              <span class="absolute inset-0 flex justify-center items-center font-bold">
+        <div className=" py-5  flex justify-center">
+          <div className="outline grid md:grid-cols-2 grid-cols-1 px-20 py-5">
+            <div className="flex">
+              <button
+                className="btn2 w-12 px-5 py-2 relative border text-white border-white uppercase font-semibold "
+                type="button"
+                onClick={() => {
+                  setAmount(amount - 1);
+                }}
+              >
+                <span className="absolute inset-0 bg-yelloww"></span>
+                <span className="absolute inset-0 flex justify-center items-center font-bold">
+                  -
+                </span>
                 -
-              </span>
-              -
-            </button>
-            <p className="px-10 mt-1">{amount}</p>
-            <button
-              class="btn2 px-5 py-0 relative border text-white border-white uppercase font-semibold "
-              type="button"
-              onClick={() => {
-                setAmount(amount + 1);
-              }}
-            >
-              <span class="absolute inset-0 bg-yelloww"></span>
-              <span class="absolute inset-0 flex justify-center items-center font-bold">
+              </button>
+              <p className="px-10 mt-1">{amount}</p>
+              <button
+                className="btn2 w-12 px-5 py-0 relative border text-white border-white uppercase font-semibold "
+                type="button"
+                onClick={() => {
+                  setAmount(amount + 1);
+                }}
+              >
+                <span className="absolute inset-0 bg-yelloww"></span>
+                <span className="absolute inset-0 flex justify-center items-center font-bold">
+                  +
+                </span>
                 +
-              </span>
-              +
-            </button>
+              </button>
+            </div>
             <button
-              class="btn2 px-5 py-0 relative ml-20 text-white  uppercase font-semibold "
+              className="btn2  md:py-0 py-3 relative  text-white  uppercase font-semibold "
               type="button"
               onClick={async () => {
                 await mint(amount);
@@ -164,8 +129,8 @@ function Mint({
                 await getTokens();
               }}
             >
-              <span class="absolute inset-0 bg-yelloww"></span>
-              <span class="absolute inset-0 flex justify-center items-center font-bold">
+              <span className="absolute inset-0 bg-yelloww"></span>
+              <span className="absolute inset-0 flex justify-center items-center font-bold">
                 Mint
               </span>
               Mint
