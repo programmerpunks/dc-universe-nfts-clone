@@ -1,7 +1,6 @@
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
 import SingleNFTCollectible from '../SingleNFTCollectible'
 import data from './data.js'
-import settings from './team_settings'
 
 import { Carousel } from 'antd'
 import { useRef } from 'react'
@@ -17,8 +16,8 @@ const Collectibles = () => {
   }
 
   return (
-    <div className="">
-      <div className="flex justify-between">
+    <div className="w-[350px] sm:w-[700px] md:w-[800px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[100%]">
+      <div className="flex justify-between overflow-hidden">
         <h2 className="text-2xl font-bold text-center uppercase">
           NFT COLLECTIBLE COMICS
         </h2>
