@@ -43,7 +43,7 @@ const Navbar = () => {
 
           <a
             href="/"
-            className="text-black dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6 flex bg-gray-50"
+            className="text-black dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6 flex"
           >
             {" "}
             <BsWallet2 size={25} />

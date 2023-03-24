@@ -4,6 +4,7 @@ import pic3 from "../../images/superman-hero-section.png";
 import pic5 from "../../images/heroFandomeMobile.png";
 import pic6 from "../../images/heroHarleyMobile.png";
 import pic7 from "../../images/heroSupermanMobile.png";
+
 export const imageSlide = [
   {url: pic1,
     url2: pic5,
