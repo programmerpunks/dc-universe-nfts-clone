@@ -1,7 +1,6 @@
 import pic1 from "../../images/dc-universe-hero-section.png";
 import pic2 from "../../images/harley-quinn-hero-section.png";
 import pic3 from "../../images/superman-hero-section.png";
-// import pic4 from "../../images/Batman-hero-section.jpg";
 import pic5 from "../../images/heroFandomeMobile.png";
 import pic6 from "../../images/heroHarleyMobile.png";
 import pic7 from "../../images/heroSupermanMobile.png";

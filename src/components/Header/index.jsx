@@ -1,5 +1,6 @@
-import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { useState } from "react";
+
 const pic1 = require("../../images/dc-logo.svg").default;
 const pic2 = require("../../images/nft-studio-logo.svg").default;
 

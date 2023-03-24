@@ -1,6 +1,8 @@
 import { useState } from "react";
-import "./Card.css";
 import {TbStack2} from 'react-icons/tb';
+
+ import "./Card.css";
+
 const HorizontalCard = ({ url, url2, comicName, date }) => {
   const [visibleUrl, setVisibleUrl] = useState(url2);
   const handleMouseHover = () => {
@@ -19,12 +21,11 @@ const HorizontalCard = ({ url, url2, comicName, date }) => {
   return (
 
     <div className="inline-block px-3 relative">
-      <div className=" w-56 h-96 max-w-xs overflow-hidden shadow-md bg-black hover:shadow-xl transition-shadow duration-300 ease-in-out hover:scale-100"
+          <div className=" w-56 h-96 max-w-xs overflow-hidden shadow-md bg-black hover:shadow-xl transition-shadow duration-300 ease-in-out hover:scale-100"
               onMouseOver={() => handleMouseHover()}
               onMouseOut={() => handleMouseHover()}
               style={bgIMageStyle}>
       </div>
-
         <div className="absolute z-10 top-[50%] h-full grad"></div>
       <div className="h-[100px]"></div>
       <div className="absolute bottom-10 left-10">
