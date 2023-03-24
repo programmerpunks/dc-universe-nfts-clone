@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
 
-import harley from "../../../images/welcome-dc-nft.png";
-
 const Welcome = ({
   connection,
   disconnect,

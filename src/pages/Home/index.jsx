@@ -13,6 +13,10 @@ import StoryWorld from "../../components/Home/StroyWorld";
 import Welcome from "../../components/Home/Welcome";
 import Mint from "../../components/Mint/Mint";
 import { ContractABI } from "../../components/Mint/Contract";
+import Carousel2 from "../../components/Carousel.2.0";
+import Listing from "../../components/HorizontalScrollCard/Listing";
+
+
 
 const Home = () => {
   const [wallet, setWallet] = useState("Connect a Wallet");
@@ -116,6 +120,7 @@ const Home = () => {
 
   return (
     <div className="max-w-complete space-y-10">
+                <Carousel2/>
       <ToastContainer position="top-center" autoClose={2000} />
       <BrowserRouter>
         <Welcome
@@ -133,6 +138,7 @@ const Home = () => {
             element={
               <>
                 <ServiceDetails />
+                <Listing/>
                 <StoryWorld />
                 <Collectibles />
                 <Instructions />

@@ -1,4 +1,3 @@
-import { BsWallet2 } from "react-icons/bs";
 
 const pic1 = require("../../images/dc-logo.svg").default;
 const pic2 = require("../../images/nft-studio-logo.svg").default;
@@ -41,13 +40,6 @@ const Navbar = () => {
             pricing
           </a>
 
-          <a
-            href="/"
-            className="text-black dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6 flex"
-          >
-            {" "}
-            <BsWallet2 size={25} />
-          </a>
         </div>
       </nav>
     </div>
