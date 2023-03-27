@@ -1,6 +1,6 @@
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
 import SingleNFTCollectible from '../SingleNFTCollectible'
-import data from './data.js'
+import data from '../../../Content/DcCollectibles/index'
 
 import { Carousel } from 'antd'
 import { useRef } from 'react'

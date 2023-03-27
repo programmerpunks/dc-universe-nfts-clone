@@ -1,4 +1,4 @@
-import gothamCall from '../../../images/gotham-call.png'
+import gothamCall from '../../../images/Footer/gotham-call.png'
 
 const CreateAccount = () => {
   return (

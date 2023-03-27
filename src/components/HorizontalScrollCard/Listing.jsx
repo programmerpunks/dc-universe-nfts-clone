@@ -1,4 +1,4 @@
-import { Data } from "./CardData.js";
+import { Data } from "../../Content/HorizontalCard/index";
 import HorizontalCard from "./HorizontalCard.jsx";
 
 import "./Card.css";

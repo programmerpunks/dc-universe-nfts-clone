@@ -1,9 +1,9 @@
-import img1 from '../../../images/bat-cowl-collection.png'
-import img2 from '../../../images/gcdk-sigil-collection.png'
-import img3 from '../../../images/boxes-of-mayhem.jpg'
-import img4 from '../../../images/charm-offensive.png'
-import img5 from '../../../images/dc-fandom-collection.png'
-import img6 from '../../../images/batman-collection.png'
+import img1 from '../../images/DcCollectibles/bat-cowl-collection.png'
+import img2 from '../../images/DcCollectibles/gcdk-sigil-collection.png'
+import img3 from '../../images/DcCollectibles/boxes-of-mayhem.jpg'
+import img4 from '../../images/DcCollectibles/charm-offensive.png'
+import img5 from '../../images/DcCollectibles/dc-fandom-collection.png'
+import img6 from '../../images/DcCollectibles/batman-collection.png'
 
 const data = [
   {

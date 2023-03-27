@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { imageSlide } from "./Data.js";
+import { imageSlide } from "../../Content/Carousel/index";
 
 const Carousel2 = () => {
   const [currentState, setCurrentState] = useState(0);

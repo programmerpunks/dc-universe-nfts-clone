@@ -1,6 +1,6 @@
 
-const pic1 = require("../../images/dc-logo.svg").default;
-const pic2 = require("../../images/nft-studio-logo.svg").default;
+const pic1 = require("../../images/Navbar/dc-logo.svg").default;
+const pic2 = require("../../images/Navbar/nft-studio-logo.svg").default;
 
 const Navbar = () => {
   return (
