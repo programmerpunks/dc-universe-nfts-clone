@@ -2,7 +2,7 @@ import gothamCall from '../../../images/Footer/gotham-call.png'
 
 const CreateAccount = () => {
   return (
-    <div className='space-y-9 xl:flex xl:flex-row-reverse xl:items-center xl:gap-10 xl:px-10'>
+    <div id="connect" className='space-y-9 xl:flex xl:flex-row-reverse xl:items-center xl:gap-10 xl:px-10'>
       <div className='flex justify-center xl:w-4/5'>
         <img src={gothamCall} alt='Gotham' />
       </div>

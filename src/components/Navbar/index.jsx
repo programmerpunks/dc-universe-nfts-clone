@@ -1,4 +1,5 @@
 
+
 const pic1 = require("../../images/Navbar/dc-logo.svg").default;
 const pic2 = require("../../images/Navbar/nft-studio-logo.svg").default;
 
@@ -20,24 +21,24 @@ const Navbar = () => {
             <img src={pic2} alt="" />
           </a>
           <a
-            href="/"
+            href="#about"
             className="text-white dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6"
           >
-            home
+            Comics
           </a>
 
           <a
-            href="/"
+            href="/#collection"
             className="text-white dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6"
           >
-            features
+            Collection
           </a>
 
           <a
-            href="/"
+            href="#connect"
             className="text-white dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6"
           >
-            pricing
+            Connect
           </a>
 
         </div>

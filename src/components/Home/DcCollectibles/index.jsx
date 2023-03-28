@@ -16,7 +16,7 @@ const Collectibles = () => {
   }
 
   return (
-    <div className="w-[350px] sm:w-[700px] md:w-[800px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[100%]">
+    <div id="collection" className="w-[350px] sm:w-[700px] md:w-[800px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[100%]">
       <div className="flex justify-between overflow-hidden">
         <h2 className="text-2xl font-bold text-center uppercase">
           NFT COLLECTIBLE COMICS
