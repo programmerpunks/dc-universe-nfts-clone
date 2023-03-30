@@ -49,13 +49,13 @@ const Carousel2 = () => {
             ></span>
           ))}
         </div>
-        <button className="bg-gray-800 font-sm py-1 px-14 text-white rounded-sm text-sm m-1 mr-3 border-white border font-bold ">
+        <button href="https://www.discord.com" className="bg-gray-800 font-sm py-1 px-14 text-white rounded-sm text-sm m-1 mr-3 border-white border font-bold ">
           EXPLORE COLLECTION
         </button>
 
-        <button className="bg-gray-800 font-sm py-1 px-14 text-white rounded-sm m-1 text-sm border-white border font-bold ">
+        <a href="https://www.discord.com" className="bg-gray-800 font-sm py-1 px-14 text-white rounded-sm m-1 text-sm border-white border font-bold ">
           JOIN THE DISCORD
-        </button>
+        </a>
       </div>
     </div>
   );

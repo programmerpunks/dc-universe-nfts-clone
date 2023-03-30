@@ -18,8 +18,8 @@ const data = [
   },
   {
     img: img3,
-    heading: 'THE HARLEY QUINN FREAKIN’ AWESOME BOXES OF MAYHEM',
-    details: 'Harley Quinn celebrates her 30th anniversary with a celebration / crime spree.',
+    heading: 'THE HARLEY QUINN FREAKIN',
+    details: 'Harley Quinn celebrates her 30th anniversary.',
   },
   {
     img: img4,
@@ -29,12 +29,12 @@ const data = [
   {
     img: img5,
     heading: 'DC FANDOME 2021 COLLECTION',
-    details: 'Mysterious storage drives featuring legendary DC comic book covers.',
+    details: 'Mysterious storage drives featuring legendary DC comic covers.',
   },
   {
     img: img6,
     heading: 'The Batman Collection',
-    details: 'Exclusive movie poster art created for The Batman’s opening weekend.',
+    details: 'Exclusive movie poster art created.',
   },
 ]
 

@@ -16,7 +16,7 @@ const Collectibles = () => {
   }
 
   return (
-    <div id="collection" className="w-[350px] sm:w-[700px] md:w-[800px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[100%] py-20">
+    <div id="collection" className="w-[330px] sm:w-[700px] md:w-[800px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[100%] py-20">
       <div className="flex justify-between overflow-hidden">
         <h2 className="text-2xl font-bold text-center uppercase">
           NFT COLLECTIBLE COMICS
@@ -48,19 +48,17 @@ const Collectibles = () => {
         infinite={false}
         draggable={true}
         variableWidth={true}
-        // {...settings}
         ref={carouselRef}
       >
         {data.map((item, index) => {
           return (
-            <di>
-
+            <div>
               <SingleNFTCollectible
                 img={item.img}
                 heading={item.heading}
                 details={item.details}
               />
-            </di>
+            </div>
           )
         })}
       </Carousel>
