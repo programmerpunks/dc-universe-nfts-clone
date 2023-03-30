@@ -116,7 +116,7 @@ const Home = () => {
 
   useEffect(() => {
     getTokens();
-  }, [userMintedAmount]);
+  });
 
   return (
     <div className="max-w-complete space-y-10">
@@ -138,8 +138,8 @@ const Home = () => {
             element={
               <>
                 <ServiceDetails />
-                <Listing/>
                 <StoryWorld />
+                <Listing/>
                 <Collectibles />
                 <Instructions />
               </>

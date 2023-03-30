@@ -21,7 +21,7 @@ const HorizontalCard = ({ url, url2, comicName, date }) => {
   return (
 
     <div className="inline-block px-3 relative">
-          <div className=" w-56 h-96 max-w-xs overflow-hidden shadow-md bg-black hover:shadow-xl transition-shadow duration-300 ease-in-out hover:scale-100"
+          <div className=" w-72 h-96 max-w-xs overflow-hidden shadow-md bg-black hover:shadow-xl transition-shadow duration-300 ease-in-out hover:scale-100"
               onMouseOver={() => handleMouseHover()}
               onMouseOut={() => handleMouseHover()}
               style={bgIMageStyle}>

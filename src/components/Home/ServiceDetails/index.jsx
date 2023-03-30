@@ -3,7 +3,7 @@ import data from '../../../Content/ServiceDetails/index'
 const ServiceDetails = () => {
   return (
     <>
-    <div id="service"className='px-[10%] flex justify-center'>
+    <div id="service"className=' py-20 px-[10%] flex justify-center'>
       <div className="mb:max-lg:grid mb:max-lg:grid-cols-2 lg:flex gap-10 sm-max-md:gap-20 2xl:gap-20">
         {data.map((item, index) => {
           return (

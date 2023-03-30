@@ -16,13 +16,13 @@ const Collectibles = () => {
   }
 
   return (
-    <div id="collection" className="w-[350px] sm:w-[700px] md:w-[800px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[100%]">
+    <div id="collection" className="w-[350px] sm:w-[700px] md:w-[800px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[100%] py-20">
       <div className="flex justify-between overflow-hidden">
         <h2 className="text-2xl font-bold text-center uppercase">
           NFT COLLECTIBLE COMICS
         </h2>
         <div className="flex items-center gap-10">
-          <button className="bg-blue-600 rounded-sm">
+          <button className="bg-blue-600 rounded-sm hidden sm:block">
             <p className="px-8 py-3 text-base uppercase font-semibold">
               View All
             </p>

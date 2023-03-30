@@ -18,7 +18,7 @@ const Carousel2 = () => {
     setCurrentState(currentState);
   };
   return (
-    <div className="relative">
+    <div className="relative pb-20">
       <img
         src={imageSlide[currentState].url}
         alt=""
