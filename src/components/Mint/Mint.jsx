@@ -79,7 +79,7 @@ function Mint({
       }, [2000]);
     };
     initialFunction();
-  }, []);
+  });
 
   return (
     <>

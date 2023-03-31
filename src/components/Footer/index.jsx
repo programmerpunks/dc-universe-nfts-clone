@@ -1,4 +1,7 @@
 const Footer = () => {
+  const openNewTab = (url) => {
+    window.open(url, '_blank');
+  };
   return (
     <div>
       <section className="bg-black font-kanit font-semibold">
@@ -54,8 +57,9 @@ const Footer = () => {
             </div>
           </nav>
           <div className="flex justify-center mt-8 space-x-6">
-            <a
-              href="https://www.fb.com"
+            <button
+               onClick={() => openNewTab('https://www.fb.com')}
+              href="/"
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">Facebook</span>
@@ -71,9 +75,10 @@ const Footer = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
-            <a
-              href="https://www.instagram.com"
+            </button>
+            <button
+            onClick={() => openNewTab('https://www.instagram.com')}
+              href="/"
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">Instagram</span>
@@ -89,9 +94,10 @@ const Footer = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
-            <a
-              href="https://www.twitter.com"
+            </button>
+            <button
+            onClick={() => openNewTab('https://www.twitter.com')}
+              href="/"
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">Twitter</span>
@@ -103,9 +109,10 @@ const Footer = () => {
               >
                 <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
               </svg>
-            </a>
-            <a
-              href="https://www.github.com"
+            </button>
+            <button
+            onClick={() => openNewTab('https://www.github.com')}
+              href="/"
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">GitHub</span>
@@ -121,9 +128,10 @@ const Footer = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
-            <a
-              href="https://www.dribble.com"
+            </button>
+            <button
+            onClick={() => openNewTab('https://www.dribble.com')}
+              href="/"
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">Dribbble</span>
@@ -139,7 +147,7 @@ const Footer = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </button>
           </div>
           <p className="mt-8 text-base leading-6 text-center text-slate-100">
             Copyright 2022 TM & ©DC. All rights reserved.

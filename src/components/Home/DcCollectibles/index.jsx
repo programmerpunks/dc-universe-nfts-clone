@@ -1,22 +1,12 @@
-import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
+
 import SingleNFTCollectible from '../SingleNFTCollectible'
 import data from '../../../Content/DcCollectibles/index'
 
-import { Carousel } from 'antd'
-import { useRef } from 'react'
 
 const Collectibles = () => {
-  const carouselRef = useRef(null)
-
-  const handlePrevious = () => {
-    carouselRef.current.prev()
-  }
-  const handleNext = () => {
-    carouselRef.current.next()
-  }
 
   return (
-    <div id="collection" className="w-[330px] sm:w-[700px] md:w-[800px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[100%] py-20">
+    <div id="collection" className="py-20">
       <div className="flex justify-between overflow-hidden">
         <h2 className="text-2xl font-bold text-center uppercase">
           NFT COLLECTIBLE COMICS
@@ -27,30 +17,11 @@ const Collectibles = () => {
               View All
             </p>
           </button>
-          <div className="flex gap-2">
-            <div
-              className="bg-blue-600 rounded-full p-2"
-              onClick={() => handlePrevious()}
-            >
-              <MdKeyboardArrowLeft size={30} />
-            </div>
-            <div
-              className="bg-blue-600 rounded-full p-2"
-              onClick={() => handleNext()}
-            >
-              <MdKeyboardArrowRight size={30} />
-            </div>
-          </div>
         </div>
       </div>
-      <Carousel
-        slidesToShow={2}
-        infinite={false}
-        draggable={true}
-        variableWidth={true}
-        ref={carouselRef}
-      >
-        {data.map((item, index) => {
+        <div className='carousel rounded-box'>
+             <div className='carousel-item'>
+               {data.map((item, index) => {
           return (
             <div>
               <SingleNFTCollectible
@@ -61,7 +32,8 @@ const Collectibles = () => {
             </div>
           )
         })}
-      </Carousel>
+             </div>
+         </div>
     </div>
   )
 }
